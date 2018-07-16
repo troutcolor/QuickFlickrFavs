@@ -1,0 +1,39 @@
+#quickflickrfavs {
+	width: 100%;
+	clear: both;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.flickrthumb {
+	float: left;
+	position: relative;
+	padding: 0px;
+	margin: 4px;
+	height: 0;
+	padding-bottom: 100%;
+}
+.flickrthumb p {
+	background: white;
+	opacity: 0.8;
+	font-size: 12px;
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0px;
+	padding: 2px;
+	width: 100%;
+	display: none;
+}
+
+.flickrthumb:hover p:nth-child(1) {
+	display: block;
+}
+/*
+	the next bit makes sure the information paragraph always shows if hover is not supported
+*/
+@media (any-hover: none) {
+ .flickrthumb p {
+    display: block;
+  }
+}
